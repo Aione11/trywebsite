@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=Ddevice-width,
+     initial-scale=1.0">
+    <meta charset="UTF-8">
+     <title>Animated Video Modal</title>
+    <link rel="stylesheet" href="VideoModal.css">
+</head>
+<body>
+    <div class="btn">
+         <div class="play"></div>
+         <p>Play Video</p>
+    </div>
+    <div class="clip">
+        <video src="./project_videos/[JPz Central] It's Not Like I Like You!! (feat. Emirichu, Static-P & Amree).mp4" controls></video>
+       <b class="close">Close</b>
+      </div>
+    <script>
+        let btn = document.querySelector('.btn');
+        let clip = document.querySelector('.clip');
+        let close = document.querySelector('.close');
+        let video = document.querySelector('video');
+        btn.onclick = function(){
+          btn.classList.add('active');
+          clip.classList.add('active');
+          video.play();
+          video.currentTime = 0;
+        }
+        close.onclick = function(){
+          btn.classList.remove('active');
+          clip.classList.remove('active');
+          video.pause();
+        }
+      </script>
+</body>
+</html>
